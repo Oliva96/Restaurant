@@ -9,19 +9,19 @@ const Featured = () => {
         '/images/featured3.png',
     ];
     return (
-        <div className="container">
-            <div className={styles.arrowContainer}>
-                <Image src='/images/arrowl.png' alt='' width='400px' height='400px' />
+        <div className={styles.container}>
+            <div className={styles.arrowContainer} style={{left: 0}}>
+                <Image src='/images/arrowl.png' alt='' layout="fill" />
             </div>
             <div className={styles.wrapper}>
                 <div className={styles.imgContainer}>
-                    {images.map((img, i) => {
-                        <Image src='/images/bake.png' alt='' key={i}  layout='fill' />
-                    })}
+                    {images.map((img, i) => (
+                        <Image src='/images/pizza.png' alt='' key={i} layout="fill" />
+                    ))}
                 </div>
             </div>
-            <div className={styles.arrowContainer}>
-                <Image src='/images/arrowr.png' alt='' width='400px' height='400px'  />
+            <div className={styles.arrowContainer} style={{right: 0}}>
+                <Image src='/images/arrowr.png' alt='' layout="fill"  />
             </div>
         </div>
     )
